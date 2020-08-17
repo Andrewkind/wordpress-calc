@@ -12,6 +12,13 @@ Author URI: https://WarrenUhrich.ca
  * @link https://github.com/TECHCareers-by-Manpower/4.1-php-advanced
  */
 
+// In PHP, when we want to make a constant, we use the "define()" function.
+// The first argument is the constant name, the second is its value.
+// We can call upon constants directly by their name (without quotes) to access their value.
+// It is convention for constants to be in all caps.
+define( 'TECHCAREERS_CALC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+include_once plugin_dir_path( __FILE__ ).'/includes/enqueue.php';
+
 // Link the "shortcode" name to our function name.
 add_shortcode(
   'techcareerscalculator', // The name between square brackets that our client can type into a post / page.
